@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gift box</title>
+
+    <style>
+      :root {
+        --bodyColor: #ac474b;
+        --whiteColor: #ffffff;
+      }
+      .main_container {
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--bodyColor);
+        position: relative;
+      }
+
+      .gift_container {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .gift_container .wrapper {
+        width: 100%;
+        height: 50px;
+        position: relative;
+        margin-bottom: 10px;
+      }
+
+      .gift_container .wrapper .box {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+      }
+
+      .box.right {
+        border-top-right-radius: 100%;
+        border-top-left-radius: 100%;
+        border-bottom-left-radius: 100%;
+        border: 10px solid var(--whiteColor);
+        left: 20%;
+      }
+
+      .box.left {
+        border-top-right-radius: 100%;
+        border-top-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        border: 10px solid var(--whiteColor);
+        right: 20%;
+      }
+
+      .boxes {
+        width: 100%;
+        height: 150px;
+        position: relative;
+      }
+
+      .boxes .box {
+        width: 70px;
+        height: 70px;
+        background-color: var(--whiteColor);
+        position: absolute;
+      }
+
+      .box.top_right {
+        top: 0;
+        right: 0;
+      }
+
+      .box.top_left {
+        top: 0;
+        left: 0;
+      }
+
+      .box.bottom_right {
+        bottom: 0;
+        right: 0;
+      }
+
+      .box.bottom_left {
+        bottom: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="gift_container">
+        <div class="wrapper">
+          <div class="box right"></div>
+          <div class="box left"></div>
+        </div>
+        <div class="boxes">
+          <div class="box top_right"></div>
+          <div class="box top_left"></div>
+          <div class="box bottom_right"></div>
+          <div class="box bottom_left"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
