@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #f3ac3c;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main_container {
+        margin-left: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .circle {
+        background: #998235;
+        border-radius: 100%;
+      }
+      .circle.c1 {
+        width: 120px;
+        height: 120px;
+        position: relative;
+      }
+
+      .circle.c1 .rec {
+        width: 10px;
+        height: 40px;
+        border-radius: 20px;
+        background: #1a4341;
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+      }
+
+      .circle.c2 {
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+        position: relative;
+        z-index: 99;
+      }
+
+      .circle.c2 .cir {
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .circle.c2 .cir1 {
+        width: 50px;
+        height: 50px;
+        background: #f3ac3c;
+      }
+
+      .circle.c2 .cir2 {
+        width: 40px;
+        height: 40px;
+        background: #1a4341;
+      }
+
+      .right_container {
+        position: relative;
+      }
+
+      .right_container .right_rec {
+        width: 120px;
+        height: 20px;
+        margin-left: -20px;
+        background: #1a4341;
+        z-index: -1;
+      }
+
+      .right_container .right_rec1 {
+        width: 40px;
+        height: 30px;
+        background: #998235;
+        position: absolute;
+        right: -39%;
+        top: -25%;
+        border-radius: 10px;
+      }
+
+      .right_rec1 .str_container {
+        position: relative;
+        width: 100%;
+        height: 30px;
+      }
+
+      .str {
+        width: 20px;
+        height: 4px;
+        border-radius: 5px;
+        background: #1a4341;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .str.str1 {
+        top: 30%;
+      }
+
+      .str.str2 {
+        bottom: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="circle c1">
+        <div class="rec"></div>
+      </div>
+      <div class="circle c2">
+        <div class="cir cir1"></div>
+        <div class="cir cir2"></div>
+      </div>
+
+      <div class="right_container">
+        <div class="right_rec"></div>
+        <div class="right_rec1">
+          <div class="str_container">
+            <div class="str str1"></div>
+            <div class="str str2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
