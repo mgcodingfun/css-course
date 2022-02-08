@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Emoji</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .main_container {
+        background: rgb(1, 0, 78);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .emoji_face {
+        width: 350px;
+        height: 350px;
+        background: rgb(255, 191, 14);
+        border-radius: 100%;
+        box-shadow: 3px 2.9px 5.9px rgba(0, 0, 0, 0.024),
+          8.3px 7.9px 16.4px rgba(0, 0, 0, 0.035),
+          19.9px 19px 39.5px rgba(0, 0, 0, 0.046),
+          66px 63px 131px rgba(0, 0, 0, 0.07);
+        position: relative;
+        filter: drop-shadow(0px 0px 10px rgb(255, 191, 14));
+
+        animation: bounce 0.8s linear infinite alternate;
+      }
+
+      @keyframes bounce {
+        0% {
+          height: 350px;
+          transform: translateY(-10%);
+        }
+        50% {
+          height: 350px;
+        }
+        to {
+          height: 300px;
+          transform: translateY(35%);
+        }
+      }
+
+      .emoji_face .eyes_container {
+        width: 240px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        z-index: 99;
+        animation: heart 0.5s linear infinite alternate;
+      }
+
+      @keyframes heart {
+        0% {
+          transform: translateX(-50%) scale(1);
+        }
+        25% {
+          transform: translateX(-50%) scale(1.12);
+        }
+        50% {
+          transform: translateX(-50%) scale(1.15);
+        }
+        75% {
+          transform: translateX(-50%) scale(1.12);
+        }
+        100% {
+          transform: translateX(-50%) scale(1.15);
+        }
+      }
+
+      .eyeLeft {
+        transform: rotate(-70deg);
+      }
+
+      .rightEye {
+        position: absolute;
+        transform: rotate(-20deg);
+        right: -5%;
+        top: 22%;
+      }
+
+      .heart_shape_eye {
+        width: 90px;
+        height: 70px;
+        background: red;
+        border-radius: 100% 100% 100% 100% / 100% 100% 100% 0%;
+        position: relative;
+      }
+
+      .heart_shape_eye::before {
+        content: "";
+        position: absolute;
+        background: red;
+        height: 70px;
+        width: 90px;
+        right: 0%;
+        top: 100%;
+        transform: rotate(-90deg);
+        transform-origin: 0 0;
+        z-index: 1;
+        border-radius: 0% 100% 100% 100% / 100% 100% 100% 100%;
+      }
+
+      .smile_container {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(163, 80, 3);
+        position: absolute;
+        border-radius: 100%;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+      }
+
+      .smile_container::after {
+        content: "adsf";
+        position: absolute;
+        width: 350px;
+        height: 300px;
+        border-radius: 100%;
+        top: -80%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgb(255, 191, 14);
+        z-index: -1;
+      }
+
+      .smile_container .tongue {
+        width: 150px;
+        height: 50px;
+        background: rgb(248, 174, 114);
+        z-index: 1;
+        border-radius: 100%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .base {
+        width: 100vw;
+        height: 10vh;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="emoji_face">
+        <div class="eyes_container">
+          <div class="eyeLeft">
+            <div class="heart_shape_eye left"></div>
+          </div>
+          <div class="rightEye">
+            <div class="heart_shape_eye right"></div>
+          </div>
+        </div>
+        <div class="smile_container">
+          <div class="tongue"></div>
+        </div>
+      </div>
+
+      <div class="base"></div>
+    </div>
+  </body>
+</html>
